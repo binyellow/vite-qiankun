@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "qiankun": "^2.6.3"
+  },
+  "name": "micro-blog",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
