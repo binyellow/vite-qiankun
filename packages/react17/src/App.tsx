@@ -16,6 +16,7 @@ const App = () => {
           <h1>Hello AsurRaa</h1>
           <DatePicker />
           <Col></Col>
+          <a href="/vue3">vue3</a>
         </div>
       </div>
     </Fragment>

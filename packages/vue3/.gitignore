@@ -1,9 +1,10 @@
+.vscode
+
+node_modules
 .DS_Store
-.vite-ssg-dist
-.vite-ssg-temp
-*.local
 dist
 dist-ssr
-node_modules
-.idea/
-*.log
+*.local
+
+package-lock.json
+yarn.lock
