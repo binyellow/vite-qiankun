@@ -6,7 +6,7 @@ import { registerMicroApps, start } from 'qiankun';
 
 registerMicroApps([
   {
-    name: 'vueApp',
+    name: 'vue3',
     entry: '//localhost:3333',
     container: '#root',
     activeRule: '/vue3',

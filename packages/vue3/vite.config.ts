@@ -26,15 +26,16 @@ export function getPages() {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  base: "http://localhost:3333",
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
     },
   },
   server: {
-    host: process.env.NODE_ENV !== "production",
+    // host: process.env.NODE_ENV !== "production",
     port: 3333,
+    origin: 'http://localhost:3333'
   },
   plugins: [
     changePackageVersion(),
