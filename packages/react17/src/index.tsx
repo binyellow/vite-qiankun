@@ -7,8 +7,8 @@ import { registerMicroApps, start } from 'qiankun';
 registerMicroApps([
   {
     name: 'vue3',
-    entry: '//localhost:3333',
-    container: '#root',
+    entry: '/child/',
+    container: '#subapp-container',
     activeRule: '/vue3',
   },
 ]);
@@ -19,5 +19,5 @@ ReactDOM.render(
   <StrictMode>
     <App />
   </StrictMode>,
-  document.getElementById("root")
+  document.getElementById("subapp-container")
 );

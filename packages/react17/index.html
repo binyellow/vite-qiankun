@@ -7,7 +7,25 @@
     <title>AsurRaa React Vite2</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div class="mainapp">
+      <!-- 标题栏 -->
+      <header class="mainapp-header">
+        <h1 onclick="push('/')">qk</h1>
+      </header>
+      <div class="mainapp-main">
+        <!-- 侧边栏 -->
+        <ul class="mainapp-sidemenu">
+          <li onclick="push('/vue3')">Vue3</li>
+          <li onclick="push('/viteapp')">viteapp</li>
+        </ul>
+        <!-- 子应用  -->
+        <main id="subapp-container"></main>
+      </div>
+    </div>
+  
+    <script>
+      function push(subapp) { history.pushState(null, subapp, subapp) }
+    </script>
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

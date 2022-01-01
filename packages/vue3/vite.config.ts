@@ -26,7 +26,7 @@ export function getPages() {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "http://localhost:3333",
+  base: "/child/",
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
