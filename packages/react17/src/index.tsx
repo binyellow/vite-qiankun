@@ -2,18 +2,24 @@ import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "antd/dist/antd.less";
-import { registerMicroApps, start } from 'qiankun';
+import { registerMicroApps, start } from "qiankun";
 
 registerMicroApps([
   {
-    name: 'vue3',
-    entry: 'http://localhost:3333',
-    container: '#subapp-container',
-    activeRule: '/vue3',
+    name: "vue3",
+    entry: "http://localhost:3333",
+    container: "#subapp-container",
+    activeRule: "/vue3",
   },
 ]);
 // 启动 qiankun
-start();
+start({
+  prefetch: "all",
+  sandbox: {
+    strictStyleIsolation: true,
+    experimentalStyleIsolation: true,
+  },
+});
 
 ReactDOM.render(
   <StrictMode>
