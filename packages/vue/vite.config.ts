@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'production') {
 const useDevMode = true; // 如果是在主应用中加载子应用vite,必须打开这个,否则vite加载不成功, 单独运行没影响
 
 export default defineConfig({
-  base: '/child/',
+  base: 'http://localhost:3333',
   plugins: [
     vue({
       script: {

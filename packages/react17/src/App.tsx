@@ -1,24 +1,21 @@
 import { Fragment } from "react";
-import { Col, DatePicker } from "antd";
-import { Test } from "@components/test";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+// import { Redirect, Switch } from "react-router";
+import routes from "./routes/config";
+import Home from "./pages/Home/index";
+
 const App = () => {
   return (
     <Fragment>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-        }}
-      >
-        <div>
-          <h1>Hello AsurRaa</h1>
-          <DatePicker />
-          <Col></Col>
-          <a href="/vue3">vue3</a>
-        </div>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/home">
+            123
+            <Home />
+          </Route>
+          <Redirect exact from="/" to="/home" />
+        </Switch>
+      </BrowserRouter>
     </Fragment>
   );
 };
