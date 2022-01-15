@@ -11,10 +11,10 @@ if (process.env.NODE_ENV === "production") {
 const useDevMode = true; // 如果是在主应用中加载子应用vite,必须打开这个,否则vite加载不成功, 单独运行没影响
 
 export default defineConfig(({ mode }) => {
-  const { VITE_BAST = '', VITE_OUT = '' } = loadEnv(mode, path.join(__dirname, "/src/env"));
+  const { VITE_BASE = '', VITE_OUT = '' } = loadEnv(mode, path.join(__dirname, "/src/env"));
   console.log(loadEnv(mode, path.join(__dirname, "/src/env")))
   return {
-    base: VITE_BAST,
+    base: VITE_BASE,
     envDir: "./src/env",
     build: {
       outDir: VITE_OUT,
@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => {
     server: {
       // host: process.env.NODE_ENV !== "production",
       port: 3333,
-      origin: "http://localhost:3333",
+      origin: VITE_BASE,
     },
     resolve: {
       alias: {
