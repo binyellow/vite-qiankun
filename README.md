@@ -12,3 +12,5 @@ micro app, docker additional publish, spring boot support basic server function
 
 - [x] vue 子应用 hashRouter 有问题
 - [x] ~~跳回主应用时/不渲染~~：主应用中重定向一下
+- [x] 'import.meta.env'得指定全
+- [x] 发现build.outDir在dev启动时也会被vite引用，如果undefined会报startWith调用失败，看看能不能pr下

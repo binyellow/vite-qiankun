@@ -17,6 +17,7 @@ const themeVariables = lessToJS(
 
 export default defineConfig({
   base: "./",
+  envDir: "./src/env",
   plugins: [
     Inspect(),
     ViteAliases({}),

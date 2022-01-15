@@ -7,6 +7,7 @@ import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/dist/helpe
 import { routes } from './router'
 import { createRouter, createWebHistory } from 'vue-router'
 
+console.log(import.meta.env)
 const head = createHead()
 
 let router = null;
