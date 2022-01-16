@@ -31,6 +31,13 @@ export default defineConfig(({ mode }) => {
       // host: process.env.NODE_ENV !== "production",
       port: 3333,
       origin: VITE_BASE,
+      proxy: {
+        '^/api/.*': {
+          target: 'localhost:9090',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, '')
+        }
+      }
     },
     resolve: {
       alias: {
