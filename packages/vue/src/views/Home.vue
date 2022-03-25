@@ -1,28 +1,28 @@
 <template>
   <img alt="Vue logo" src="../assets/logo.png" />
   <HelloWorld msg="Vue.js Demo" @close="close"> </HelloWorld>
+  <el-button type="primary" @click="close">提交</el-button>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
+import HelloWorld from "../components/HelloWorld.vue";
+import { ElButton } from "element-plus";
+import { defineComponent } from "vue";
 
-export default {
-  name: 'App',
+export default defineComponent({
+  name: "App",
   components: {
     HelloWorld,
+    ElButton,
   },
-  created() {
-    console.log('vue2.0写法 created');
+  setup() {
+    return {
+      close() {
+        console.log("close");
+      },
+    };
   },
-  mounted() {
-    console.log(this.$route);
-  },
-  methods: {
-    close() {
-      console.log('close');
-    },
-  },
-};
+});
 </script>
 
 <style>

@@ -15,10 +15,10 @@ registerMicroApps([
 // 启动 qiankun
 start({
   prefetch: "all",
-  sandbox: {
-    strictStyleIsolation: true,
-    experimentalStyleIsolation: true,
-  },
+  // sandbox: {
+  //   strictStyleIsolation: true,
+  //   experimentalStyleIsolation: true,
+  // },
 });
 
 ReactDOM.render(

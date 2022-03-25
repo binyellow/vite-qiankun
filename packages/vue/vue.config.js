@@ -36,5 +36,9 @@ module.exports = {
       libraryTarget: 'umd',
       jsonpFunction: `webpackJsonp_${name}`,
     },
+    plugins: [
+      require('unplugin-vue-components/webpack')({ /* options */ }),
+      require('unplugin-auto-import/webpack')({ /* options */ }),
+    ],
   },
 };

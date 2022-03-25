@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "qiankun": "^2.6.3",
-    "react-router": "^6.2.1"
+    "qiankun": "^2.6.3"
   },
   "name": "micro-blog",
   "devDependencies": {

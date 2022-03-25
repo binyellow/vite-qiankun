@@ -5,6 +5,7 @@ import App from './App.vue';
 import routes from './router';
 import store from './store';
 import './main.css';
+import 'element-plus/dist/index.css';
 
 let router = null;
 let instance = null;
