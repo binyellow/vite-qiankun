@@ -40,6 +40,13 @@ export default defineConfig({
   server: {
     open: true,
     port: 3003,
+    proxy: {
+      "/api": {
+        target: "http://localhost:9090",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/v1/, ""),
+      },
+    },
   },
   css: {
     preprocessorOptions: {

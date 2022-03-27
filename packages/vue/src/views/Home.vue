@@ -2,12 +2,16 @@
   <img alt="Vue logo" src="../assets/logo.png" />
   <HelloWorld msg="Vue.js Demo" @close="close"> </HelloWorld>
   <el-button type="primary" @click="close">提交</el-button>
+  <input v-model="n" />
+  <input v-model="p" />
 </template>
 
 <script>
+import axios from "axios";
 import HelloWorld from "../components/HelloWorld.vue";
 import { ElButton } from "element-plus";
-import { defineComponent } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
+import { prefix } from "@/utils/constants.ts";
 
 export default defineComponent({
   name: "App",
@@ -16,10 +20,28 @@ export default defineComponent({
     ElButton,
   },
   setup() {
+    const n = ref("binyellow");
+    const p = ref();
+
+    onMounted(() => {
+      console.log(123);
+    });
     return {
       close() {
-        console.log("close");
+        const username = n.value;
+        const password = p.value;
+        console.log("close", username, password);
+        axios.request({
+          url: `${prefix}/user/login`,
+          method: "POST",
+          data: {
+            username,
+            password,
+          },
+        });
       },
+      n,
+      p,
     };
   },
 });
