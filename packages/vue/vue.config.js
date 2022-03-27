@@ -7,8 +7,10 @@ function resolve(dir) {
 
 const port = 3333;
 
+const publicPath = process.env.VUE_APP_P_PATH;
 module.exports = {
-  outputDir: 'dist',
+  publicPath,
+  outputDir: 'vue3',
   assetsDir: 'static',
   filenameHashing: true,
   devServer: {

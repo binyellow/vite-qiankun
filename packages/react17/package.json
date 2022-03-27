@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite --mode development",
     "build:beta": "vite build --mode beta",
-    "build": "vite build --mode release",
+    "build": "vite build --mode production",
     "serve": "vite preview",
     "predeploy": "yarn build:release",
     "deploy": "sh ./scripts/deploy.sh"
